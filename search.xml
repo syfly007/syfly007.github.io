@@ -30,6 +30,11 @@
 <li>下载安装git</li>
 <li>下载安装hexo: npm install -g hexo（最好翻墙）</li>
 </ul>
+<p>本文环境：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Mac OS v10.15.2</span><br><span class="line">node v11.10.0</span><br><span class="line">npm v6.7.0</span><br><span class="line">Hexo v4.2.0</span><br><span class="line">Next v6.0.0</span><br></pre></td></tr></table></figure>
+
+
+
 <h1 id="本地搭建静态博客"><a href="#本地搭建静态博客" class="headerlink" title="本地搭建静态博客"></a>本地搭建静态博客</h1><ul>
 <li>新建一个文件夹，如blog</li>
 <li>命令行进入该文件夹，输入：hexo init</li>
