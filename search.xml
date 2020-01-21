@@ -31,7 +31,7 @@
 <p>$$<br>准确率（accuracy） = （TP + TN)/(TP + TN + FP + FN)<br>$$</p>
 <pre><code>这里$$predict$$表示预测正确的样本数，$$total$$表示总样本数。
 
-准确率（accuracy）应该是最常用的评价指标，这种方式通常是可行的，但是有些特殊情况下也会遇到问题。比如有个雷达预测数据集，有99个为真，1个为假，如果模型是直接统统预测为真，准确率就为99%，看起来准确率很高，但显然不是我们想要的模型。</code></pre><h2 id="查准率-查全率"><a href="#查准率-查全率" class="headerlink" title="查准率/查全率"></a>查准率/查全率</h2><pre><code>这时就需要另外2个指标：</code></pre><p>$$<br>精确率(precision) = TP/(TP+FP)<br>$$</p>
+准确率（accuracy）应该是最常用的评价指标，这种方式通常是可行的，但是有些特殊情况下也会遇到问题。比如有个雷达预测数据集，有99个为真，1个为假，如果模型是直接统统预测为真，准确率就为99%，看起来准确率很高，但显然不是我们想要的模型。</code></pre><h2 id="查准率-查全率"><a href="#查准率-查全率" class="headerlink" title="查准率/查全率"></a>查准率/查全率</h2><pre><code>这时就需要另外2个指标： </code></pre><p>$$<br>精确率(precision) = TP/(TP+FP)<br>$$</p>
 <p>$$<br>召回率(recall) = TP/(TP+FN)<br>$$</p>
 <pre><code>为了便于形象理解，请看如下的文氏图。</code></pre><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Precisionrecall.svg/640px-Precisionrecall.svg.png?1526869494881" alt="precision and recall"></p>
 <pre><code>其实就是分母不同，precision的分母是全部预测为正类的样本数，recall是全部正样本数。

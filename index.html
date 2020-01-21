@@ -220,10 +220,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-01-19 14:50:23 / 修改时间：14:52:54" itemprop="dateCreated datePublished" datetime="2020-01-19T14:50:23+08:00">2020-01-19</time>
+              <time title="创建时间：2020-01-19 14:50:23" itemprop="dateCreated datePublished" datetime="2020-01-19T14:50:23+08:00">2020-01-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-21 23:17:12" itemprop="dateModified" datetime="2020-01-21T23:17:12+08:00">2020-01-21</time>
+              </span>
 
           
             <span id="/2020/01/19/%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/" class="post-meta-item leancloud_visitors" data-flag-title="评价指标" title="阅读次数">
@@ -553,9 +559,11 @@
         .then(({ results }) => {
           if (results.length > 0) {
             var counter = results[0];
-              leancloudSelector(url).innerText = counter.time + 1;
             Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
               .then(response => response.json())
+              .then(() => {
+                leancloudSelector(url).innerText = counter.time + 1;
+              })
               .catch(error => {
                 console.error('Failed to save visitor count', error);
               })
