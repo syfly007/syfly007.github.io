@@ -28,8 +28,8 @@
 <td align="center">true negative(TN)</td>
 </tr>
 </tbody></table>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="90.574ex" height="3.343ex" style="vertical-align: -1.171ex;" viewBox="0 -934.9 38997.2 1439.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
-<title id="MathJax-SVG-1-Title"> 准确率（accuracy） = predict / total\ predict = TP + TN\ total = TP + TN + FP + FN </title>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="100ex" height="9.343ex" style="vertical-align: -7.171ex; max-width: 60000px;" viewBox="0 -934.9 43055.4 4022.5" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title"> 准确率（accuracy） = predict / total\\ predict = TP + TN\\ total = TP + TN + FP + FN </title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E1-MJMATHI-61" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path>
 <path stroke-width="1" id="E1-MJMATHI-63" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path>
@@ -52,6 +52,7 @@
 <path stroke-width="1" id="E1-MJMATHI-46" d="M48 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H742Q749 676 749 669Q749 664 736 557T722 447Q720 440 702 440H690Q683 445 683 453Q683 454 686 477T689 530Q689 560 682 579T663 610T626 626T575 633T503 634H480Q398 633 393 631Q388 629 386 623Q385 622 352 492L320 363H375Q378 363 398 363T426 364T448 367T472 374T489 386Q502 398 511 419T524 457T529 475Q532 480 548 480H560Q567 475 567 470Q567 467 536 339T502 207Q500 200 482 200H470Q463 206 463 212Q463 215 468 234T473 274Q473 303 453 310T364 317H309L277 190Q245 66 245 60Q245 46 334 46H359Q365 40 365 39T363 19Q359 6 353 0H336Q295 2 185 2Q120 2 86 2T48 1Z"></path>
 </defs>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+<g transform="translate(13238,0)">
 <text font-family="monospace" stroke="none" transform="scale(71.759) matrix(1 0 0 -1 0 0)">准</text>
 <g transform="translate(1148,0)">
 <text font-family="monospace" stroke="none" transform="scale(71.759) matrix(1 0 0 -1 0 0)">确</text>
@@ -87,39 +88,44 @@
  <use xlink:href="#E1-MJMATHI-74" x="15388" y="0"></use>
  <use xlink:href="#E1-MJMATHI-61" x="15750" y="0"></use>
  <use xlink:href="#E1-MJMATHI-6C" x="16279" y="0"></use>
- <use xlink:href="#E1-MJMATHI-70" x="16828" y="0"></use>
- <use xlink:href="#E1-MJMATHI-72" x="17331" y="0"></use>
- <use xlink:href="#E1-MJMATHI-65" x="17783" y="0"></use>
- <use xlink:href="#E1-MJMATHI-64" x="18249" y="0"></use>
- <use xlink:href="#E1-MJMATHI-69" x="18773" y="0"></use>
- <use xlink:href="#E1-MJMATHI-63" x="19118" y="0"></use>
- <use xlink:href="#E1-MJMATHI-74" x="19552" y="0"></use>
- <use xlink:href="#E1-MJMAIN-3D" x="20191" y="0"></use>
- <use xlink:href="#E1-MJMATHI-54" x="21247" y="0"></use>
- <use xlink:href="#E1-MJMATHI-50" x="21952" y="0"></use>
- <use xlink:href="#E1-MJMAIN-2B" x="22926" y="0"></use>
- <use xlink:href="#E1-MJMATHI-54" x="23926" y="0"></use>
- <use xlink:href="#E1-MJMATHI-4E" x="24631" y="0"></use>
- <use xlink:href="#E1-MJMATHI-74" x="25769" y="0"></use>
- <use xlink:href="#E1-MJMATHI-6F" x="26131" y="0"></use>
- <use xlink:href="#E1-MJMATHI-74" x="26616" y="0"></use>
- <use xlink:href="#E1-MJMATHI-61" x="26978" y="0"></use>
- <use xlink:href="#E1-MJMATHI-6C" x="27507" y="0"></use>
- <use xlink:href="#E1-MJMAIN-3D" x="28084" y="0"></use>
- <use xlink:href="#E1-MJMATHI-54" x="29140" y="0"></use>
- <use xlink:href="#E1-MJMATHI-50" x="29844" y="0"></use>
- <use xlink:href="#E1-MJMAIN-2B" x="30818" y="0"></use>
- <use xlink:href="#E1-MJMATHI-54" x="31819" y="0"></use>
- <use xlink:href="#E1-MJMATHI-4E" x="32523" y="0"></use>
- <use xlink:href="#E1-MJMAIN-2B" x="33634" y="0"></use>
- <use xlink:href="#E1-MJMATHI-46" x="34635" y="0"></use>
- <use xlink:href="#E1-MJMATHI-50" x="35384" y="0"></use>
- <use xlink:href="#E1-MJMAIN-2B" x="36358" y="0"></use>
- <use xlink:href="#E1-MJMATHI-46" x="37359" y="0"></use>
- <use xlink:href="#E1-MJMATHI-4E" x="38108" y="0"></use>
+</g>
+<g transform="translate(17181,-1557)">
+ <use xlink:href="#E1-MJMATHI-70" x="0" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-72" x="503" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-65" x="955" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-64" x="1421" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-69" x="1945" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-63" x="2290" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-74" x="2724" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-3D" x="3363" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-54" x="4419" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-50" x="5124" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-2B" x="6097" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-54" x="7098" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-4E" x="7803" y="0"></use>
+</g>
+<g transform="translate(14914,-2878)">
+ <use xlink:href="#E1-MJMATHI-74" x="0" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-6F" x="361" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-74" x="847" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-61" x="1208" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-6C" x="1738" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-3D" x="2314" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-54" x="3370" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-50" x="4075" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-2B" x="5048" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-54" x="6049" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-4E" x="6754" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-2B" x="7864" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-46" x="8865" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-50" x="9614" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-2B" x="10588" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-46" x="11589" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-4E" x="12338" y="0"></use>
+</g>
 </g>
 </svg></span></p>
-<p>这里<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.256ex" height="2.509ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -791.3 3124 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-2-Title">
+<p>这里<span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.256ex" height="2.509ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -791.3 3124 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-2-Title">
 <title id="MathJax-SVG-2-Title">predict</title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E2-MJMATHI-70" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path>
@@ -139,7 +145,7 @@
  <use xlink:href="#E2-MJMATHI-63" x="2290" y="0"></use>
  <use xlink:href="#E2-MJMATHI-74" x="2724" y="0"></use>
 </g>
-</svg></span>表示预测正确的样本数，<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.73ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2036.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-3-Title">
+</svg></span>表示预测正确的样本数，<span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.73ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2036.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-3-Title">
 <title id="MathJax-SVG-3-Title">total</title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E3-MJMATHI-74" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path>
