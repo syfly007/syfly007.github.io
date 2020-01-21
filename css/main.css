@@ -1084,7 +1084,6 @@ pre .javascript .function {
   box-shadow: inset 0 2px 6px #000;
   position: fixed;
   top: 0;
-  z-index: 1200;
 }
 .sidebar a,
 .sidebar span.exturl {
@@ -1105,10 +1104,6 @@ pre .javascript .function {
   color: #999;
   padding: 18px 10px;
   text-align: center;
-}
-.site-overview-wrap {
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 .cc-license {
   margin-top: 10px;
@@ -1158,7 +1153,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #09ff0a;
+  background: #7da8ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1262,6 +1257,8 @@ pre .javascript .function {
 }
 .sidebar-panel {
   display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .sidebar-panel-active {
   display: block;
@@ -1286,10 +1283,6 @@ pre .javascript .function {
 }
 .sidebar-toggle:hover .toggle-line {
   background: #87daff;
-}
-.post-toc-wrap {
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 .post-toc {
   font-size: 0.875em;
@@ -1635,8 +1628,6 @@ pre .javascript .function {
   display: inline;
   font-size: 1em;
   font-weight: normal;
-  margin-bottom: 0;
-  margin-top: 0;
 }
 .posts-collapse .post-title a,
 .posts-collapse .post-title span.exturl {
@@ -2241,7 +2232,6 @@ ul.breadcrumb li + li:last-child {
   height: 20px;
   outline: 0;
   padding: 8px 0;
-  vertical-align: middle;
   width: 100%;
 }
 .search-popup #no-result {
@@ -2510,6 +2500,7 @@ hr {
 .sidebar {
   transition: all 0.4s;
   width: 320px;
+  z-index: 1200;
 }
 .sub-menu {
   margin: 10px 0;
