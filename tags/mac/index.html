@@ -431,7 +431,7 @@
 
       Counter('get', `/classes/Counter?where=${encodeURIComponent(JSON.stringify({ url }))}&limit=1`)
         .then(response => response.json())
-        .then(({ results }) => {
+        .then(({ results }) => {  
           if (results.length > 0) {
             var counter = results[0];
             Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
@@ -459,7 +459,7 @@
         return decodeURI(element.getAttribute('id'));
       });
 
-      Counter('get', `/classes/Counter?where=${encodeURIComponent(${JSON.stringify({ url: { '$in': entries } })})}`)
+      Counter('get', `/classes/Counter?where=${encodeURIComponent(JSON.stringify({ url: { '$in': entries } }))}`)
         .then(response => response.json())
         .then(({ results }) => {
           if (results.length === 0) {
