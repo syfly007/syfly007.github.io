@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>test</title>
-    <url>/2020/01/23/test/</url>
-    <content><![CDATA[<p>just test!</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>测试</title>
-    <url>/2020/01/22/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>只是测试</p>
-]]></content>
-  </entry>
-  <entry>
     <title>评价指标</title>
     <url>/2020/01/19/%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/</url>
     <content><![CDATA[<p>机器学习有多种评价指标，常用的有准确率（accuracy）、查准率（precision）、查全率（recall）和 F1-score。</p>
