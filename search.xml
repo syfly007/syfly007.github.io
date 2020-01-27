@@ -125,7 +125,7 @@
 </g>
 </g>
 </svg></span></p>
-<p>这里<span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.256ex" height="2.509ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -791.3 3124 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-2-Title">
+<p>​    这里<span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.256ex" height="2.509ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -791.3 3124 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-2-Title">
 <title id="MathJax-SVG-2-Title">predict</title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E2-MJMATHI-70" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path>
@@ -160,8 +160,9 @@
  <use xlink:href="#E3-MJMATHI-61" x="1208" y="0"></use>
  <use xlink:href="#E3-MJMATHI-6C" x="1738" y="0"></use>
 </g>
-</svg></span>表示总样本数。</p>
-<pre><code>准确率（accuracy）应该是最常用的评价指标，这种方式通常是可行的，但是有些特殊情况下也会遇到问题。比如有个雷达预测数据集，有99个为真，1个为假，如果模型是直接统统预测为真，准确率就为99%，看起来准确率很高，但显然不是我们想要的模型。</code></pre><h2 id="查准率-查全率"><a href="#查准率-查全率" class="headerlink" title="查准率/查全率"></a>查准率/查全率</h2><pre><code>这时就需要另外2个指标： </code></pre><p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="38.496ex" height="3.343ex" style="vertical-align: -1.171ex;" viewBox="0 -934.9 16574.4 1439.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-4-Title">
+</svg></span>表示总样本数。<br>​<br>​    准确率（accuracy）应该是最常用的评价指标，这种方式通常是可行的，但是有些特殊情况下也会遇到问题。比如有个雷达预测数据集，有99个为真，1个为假，如果模型是直接统统预测为真，准确率就为99%，看起来准确率很高，但显然不是我们想要的模型。</p>
+<h2 id="查准率-查全率"><a href="#查准率-查全率" class="headerlink" title="查准率/查全率"></a>查准率/查全率</h2><p>​    这时就需要另外2个指标： </p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="38.496ex" height="3.343ex" style="vertical-align: -1.171ex;" viewBox="0 -934.9 16574.4 1439.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-4-Title">
 <title id="MathJax-SVG-4-Title"> 精确率(precision) = TP/(TP+FP) </title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E4-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path>
@@ -260,13 +261,14 @@
  <use xlink:href="#E5-MJMAIN-29" x="14698" y="0"></use>
 </g>
 </svg></span></p>
-<pre><code>为了便于形象理解，请看如下的文氏图。</code></pre><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Precisionrecall.svg/640px-Precisionrecall.svg.png?1526869494881" alt="precision and recall"></p>
-<p>​    其实就是分母不同，precision的分母是全部预测为正类的样本数，recall是全部正样本数。</p>
-<p>​    在信息检索领域，精确率和召回率又被称为<strong>查准率</strong>和<strong>查全率</strong>，</p>
-<p>​    <strong>查准率</strong>＝检索出的相关信息量 / 检索出的信息总量</p>
-<p>​    <strong>查全率</strong>＝检索出的相关信息量 / 系统中的相关信息总量</p>
-<p>​    通俗的说，precison表示预测的样本中有多少是正确的，recall表示所有正样本中有多少是正确的。</p>
-<h2 id="F1"><a href="#F1" class="headerlink" title="F1"></a>F1</h2><pre><code>有的时候，我们要同时衡量recall和precision，于是对它们做调和平均数(Harmonic mean)。</code></pre><p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="27.931ex" height="5.676ex" style="vertical-align: -2.171ex;" viewBox="0 -1508.9 12025.9 2443.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-6-Title">
+<p>​    为了便于形象理解，请看如下的文氏图。</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Precisionrecall.svg/640px-Precisionrecall.svg.png?1526869494881" alt="precision and recall"></p>
+<p>其实就是分母不同，precision的分母是全部预测为正类的样本数，recall是全部正样本数。</p>
+<p>在信息检索领域，精确率和召回率又被称为<strong>查准率</strong>和<strong>查全率</strong>，</p>
+<p><strong>查准率</strong>＝检索出的相关信息量 / 检索出的信息总量</p>
+<p><strong>查全率</strong>＝检索出的相关信息量 / 系统中的相关信息总量</p>
+<p>通俗的说，precison表示预测的样本中有多少是正确的，recall表示所有正样本中有多少是正确的。</p>
+<h2 id="F1"><a href="#F1" class="headerlink" title="F1"></a>F1</h2><p>​    有的时候，我们要同时衡量recall和precision，于是对它们做调和平均数(Harmonic mean)。<br><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="27.931ex" height="5.676ex" style="vertical-align: -2.171ex;" viewBox="0 -1508.9 12025.9 2443.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-6-Title">
 <title id="MathJax-SVG-6-Title"> F1 = \frac {2⋅Precision⋅Recall} {Precision + Recall} </title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E6-MJMATHI-46" d="M48 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H742Q749 676 749 669Q749 664 736 557T722 447Q720 440 702 440H690Q683 445 683 453Q683 454 686 477T689 530Q689 560 682 579T663 610T626 626T575 633T503 634H480Q398 633 393 631Q388 629 386 623Q385 622 352 492L320 363H375Q378 363 398 363T426 364T448 367T472 374T489 386Q502 398 511 419T524 457T529 475Q532 480 548 480H560Q567 475 567 470Q567 467 536 339T502 207Q500 200 482 200H470Q463 206 463 212Q463 215 468 234T473 274Q473 303 453 310T364 317H309L277 190Q245 66 245 60Q245 46 334 46H359Q365 40 365 39T363 19Q359 6 353 0H336Q295 2 185 2Q120 2 86 2T48 1Z"></path>
@@ -335,8 +337,7 @@
 </g>
 </g>
 </g>
-</svg></span><br>    可以看到，recall 体现了分类模型对正样本的识别能力，recall 越高，说明模型对正样本的识别能力越强，precision 体现了模型对负样本的区分能力，precision越高，说明模型对负样本的区分能力越强。F1-score 是两者的综合。F1-score 越高，说明分类模型越稳健。</p>
-<pre><code>有的时候，我们对recall 与 precision 赋予不同的权重，表示对分类模型的偏好：</code></pre><p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="65.545ex" height="7.176ex" style="vertical-align: -3.005ex;" viewBox="0 -1796 28220.6 3089.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-7-Title">
+</svg></span><br>​    可以看到，recall 体现了分类模型对正样本的识别能力，recall 越高，说明模型对正样本的识别能力越强，precision 体现了模型对负样本的区分能力，precision越高，说明模型对负样本的区分能力越强。F1-score 是两者的综合。F1-score 越高，说明分类模型越稳健。<br>​<br>​    有的时候，我们对recall 与 precision 赋予不同的权重，表示对分类模型的偏好：<br><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="65.545ex" height="7.176ex" style="vertical-align: -3.005ex;" viewBox="0 -1796 28220.6 3089.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-7-Title">
 <title id="MathJax-SVG-7-Title"> F_{β}=\frac{(1+β^2)TP}{(1+β^2)TP+β^2FN+FP}=\frac{(1+β^2)⋅Precision⋅Recall}{β^2⋅Precision+Recall} </title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E7-MJMATHI-46" d="M48 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H742Q749 676 749 669Q749 664 736 557T722 447Q720 440 702 440H690Q683 445 683 453Q683 454 686 477T689 530Q689 560 682 579T663 610T626 626T575 633T503 634H480Q398 633 393 631Q388 629 386 623Q385 622 352 492L320 363H375Q378 363 398 363T426 364T448 367T472 374T489 386Q502 398 511 419T524 457T529 475Q532 480 548 480H560Q567 475 567 470Q567 467 536 339T502 207Q500 200 482 200H470Q463 206 463 212Q463 215 468 234T473 274Q473 303 453 310T364 317H309L277 190Q245 66 245 60Q245 46 334 46H359Q365 40 365 39T363 19Q359 6 353 0H336Q295 2 185 2Q120 2 86 2T48 1Z"></path>
@@ -460,7 +461,7 @@
 </g>
 </g>
 </g>
-</svg></span><br>    可以看到，当 β=1，那么Fβ就退回到F1了，β其实反映了模型分类能力的偏好，β&gt;1 的时候，precision的权重更大，为了提高Fβ，我们希望precision 越小，而recall 应该越大，说明模型更偏好于提升recall，意味着模型更看重对正样本的识别能力； 而 β&lt;1的时候，recall 的权重更大，因此，我们希望recall越小，而precision越大，模型更偏好于提升precision，意味着模型更看重对负样本的区分能力。</p>
+</svg></span><br>​    可以看到，当 β=1，那么Fβ就退回到F1了，β其实反映了模型分类能力的偏好，β&gt;1 的时候，precision的权重更大，为了提高Fβ，我们希望precision 越小，而recall 应该越大，说明模型更偏好于提升recall，意味着模型更看重对正样本的识别能力； 而 β&lt;1的时候，recall 的权重更大，因此，我们希望recall越小，而precision越大，模型更偏好于提升precision，意味着模型更看重对负样本的区分能力。</p>
 <h2 id="交叉熵误差-Cross-entropy-Error，CE"><a href="#交叉熵误差-Cross-entropy-Error，CE" class="headerlink" title="交叉熵误差 (Cross-entropy Error，CE)"></a><strong>交叉熵误差</strong> (Cross-entropy Error，<strong>CE</strong>)</h2><h2 id="焦点误差（Focal-Loss，FL）"><a href="#焦点误差（Focal-Loss，FL）" class="headerlink" title="焦点误差（Focal Loss，FL）"></a>焦点误差（Focal Loss，FL）</h2><p>参考资料：</p>
 <p><a href="https://www.wikiwand.com/en/F1_score" target="_blank" rel="noopener">https://www.wikiwand.com/en/F1_score</a></p>
 <p><a href="https://blog.csdn.net/matrix_space/article/details/50384518" target="_blank" rel="noopener">https://blog.csdn.net/matrix_space/article/details/50384518</a></p>
@@ -482,7 +483,8 @@
 <h2 id="Latex"><a href="#Latex" class="headerlink" title="Latex"></a>Latex</h2><h3 id="Mathpix-Snipping-Tool"><a href="#Mathpix-Snipping-Tool" class="headerlink" title="Mathpix Snipping Tool"></a>Mathpix Snipping Tool</h3><p>​    能够方便的将公式截图转换为latex代码</p>
 <h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><h2 id="Free-Download-Manager"><a href="#Free-Download-Manager" class="headerlink" title="Free Download Manager"></a>Free Download Manager</h2><h1 id="翻墙"><a href="#翻墙" class="headerlink" title="翻墙"></a>翻墙</h1><h2 id="shadowsocks"><a href="#shadowsocks" class="headerlink" title="shadowsocks"></a>shadowsocks</h2><p>​    这个不需要解释</p>
 <h2 id="proxifier"><a href="#proxifier" class="headerlink" title="proxifier"></a>proxifier</h2><p>​    能够针对app进行代理设置</p>
-<h1 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h1><h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><h3 id="mackup"><a href="#mackup" class="headerlink" title="mackup"></a>mackup</h3><h2 id="清理"><a href="#清理" class="headerlink" title="清理"></a>清理</h2><h3 id="OmniDiskSweeper"><a href="#OmniDiskSweeper" class="headerlink" title="OmniDiskSweeper"></a>OmniDiskSweeper</h3><p>​    磁盘扫描工具</p>
+<h1 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h1><h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><h3 id="mackup"><a href="#mackup" class="headerlink" title="mackup"></a>mackup</h3><h4 id="Winclone"><a href="#Winclone" class="headerlink" title="Winclone"></a>Winclone</h4><p>​    备份、还原mac的windows系统分区，甚至可以将pc中的windows还原到mac上！</p>
+<h2 id="清理"><a href="#清理" class="headerlink" title="清理"></a>清理</h2><h3 id="OmniDiskSweeper"><a href="#OmniDiskSweeper" class="headerlink" title="OmniDiskSweeper"></a>OmniDiskSweeper</h3><p>​    磁盘扫描工具</p>
 ]]></content>
       <tags>
         <tag>soft</tag>
