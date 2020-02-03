@@ -27,22 +27,26 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k</span><br></pre></td></tr></table></figure>
 
 <p>对应的终端需要安装字体，<a href="https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k" target="_blank" rel="noopener">参考</a></p>
+<p>字体安装好后，输入以下命令， 并按照提示配置即可：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">p10k configure</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>修改.zshrc</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">plugins&#x3D;(zsh-syntax-highlighting git zsh-z osx zsh-autosuggestions)</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h3><p>zsh语法高亮插件，安装后命令行会比较卡，慎用</p>
+<h3 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h3><p>zsh语法高亮插件</p>
 <p>安装(基于oh my zsh)：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
 
-
-
+<p>注:安装后命令行会比较卡，慎用</p>
 <h3 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h3><p>自动提示插件</p>
 <p>安装(基于oh my zsh)：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/zsh-users/zsh-autosuggestions $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
 
-<p>使用,作为自动补全快捷键，.zshrc添加</p>
+<p>使用’,’作为自动补全快捷键，.zshrc添加</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bindkey &#39;,&#39; autosuggest-accept</span><br></pre></td></tr></table></figure>
 
 
