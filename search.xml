@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>linux命令行环境</title>
+    <url>/2020/02/03/linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<p>个人喜欢的linux命令行环境搭建</p>
+<a id="more"></a> 
+
+<h1 id="fzf"><a href="#fzf" class="headerlink" title="fzf"></a>fzf</h1><p>模糊搜索神器</p>
+<p>安装</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf</span><br><span class="line">~/.fzf/install</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h1><p>强大的shell环境</p>
+<p>安装</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Oh-My-Zsh"><a href="#Oh-My-Zsh" class="headerlink" title="Oh My Zsh"></a>Oh My Zsh</h2><p>开源、社区驱动的zsh配置集合</p>
+<p>安装</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</span><br></pre></td></tr></table></figure>
+
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h2 id="powerlevel10k主题"><a href="#powerlevel10k主题" class="headerlink" title="powerlevel10k主题"></a>powerlevel10k主题</h2><p>漂亮的shell主题</p>
+<p>安装</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k</span><br></pre></td></tr></table></figure>
+
+<p>对应的终端需要安装字体，<a href="https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k" target="_blank" rel="noopener">参考</a></p>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>修改.zshrc</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">plugins&#x3D;(zsh-syntax-highlighting git zsh-z osx zsh-autosuggestions)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h3><p>zsh语法高亮插件，安装后命令行会比较卡，慎用</p>
+<p>安装(基于oh my zsh)：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h3><p>自动提示插件</p>
+<p>安装(基于oh my zsh)：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/zsh-users/zsh-autosuggestions $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
+
+<p>使用,作为自动补全快捷键，.zshrc添加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bindkey &#39;,&#39; autosuggest-accept</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="zsh-z"><a href="#zsh-z" class="headerlink" title="zsh-z"></a>zsh-z</h3><p>目录切换工具</p>
+<p>安装(基于oh my zsh)：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>linux</tag>
+        <tag>command</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>评价指标</title>
     <url>/2020/01/19/%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/</url>
     <content><![CDATA[<p>机器学习有多种评价指标，常用的有准确率（accuracy）、查准率（precision）、查全率（recall）和 F1-score。</p>
