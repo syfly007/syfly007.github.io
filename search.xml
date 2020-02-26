@@ -21,6 +21,8 @@
 <p>在不新增交换机的前提下，为达到此目标，需要一个主机有2个网口，用来连接2个网段。</p>
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>系统：centos7</p>
 <p>防火墙软件：iptables</p>
+<a id="more"></a> 
+
 <h2 id="网络拓扑"><a href="#网络拓扑" class="headerlink" title="网络拓扑"></a>网络拓扑</h2><p>有2个网段：192.168.0.X 和 192.168.1.X</p>
 <p>有3个主机：</p>
 <ul>
