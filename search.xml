@@ -5,8 +5,8 @@
     <url>/2020/02/26/linux%E7%B3%BB%E7%BB%9F%E6%8B%B7%E8%B4%9D%E5%90%8E%E6%97%A0%E6%B3%95%E8%BF%9B%E5%85%A5%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</url>
     <content><![CDATA[<h1 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h1><p>工作中需要将一个centos系统作为原盘，拷贝给其他机器使用，发现启动后无法进入图形化桌面。</p>
 <h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>源系统盘所在主机有独立显卡，目标机器却没有，找不到对应独立显卡配置，导致无法启动图形化界面。</p>
-<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>删除独立显卡配置即可，并重启系统。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mv /etc/X11/xorg.conf /etc/X11/xorg.conf.bak; </span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>删除独立显卡配置，并重启系统即可。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mv /etc/X11/xorg.conf /etc/X11/xorg.conf.bak; --备份一下，防止以后需要还原</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <tags>
