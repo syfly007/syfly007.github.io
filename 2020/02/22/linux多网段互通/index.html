@@ -48,21 +48,21 @@
   };
 </script>
 
-  <meta name="description" content="[TOC]">
+  <meta name="description" content="因工作需要，要将2个独立的网段打通，使2个网段中的某些主机能相互访问。 在不新增交换机的前提下，为达到此目标，需要一个主机有2个网口，用来连接2个网段。 环境系统：centos7 防火墙软件：iptables 网络拓扑有2个网段：192.168.0.X 和 192.168.1.X 有3个主机：  A主机：192.168.0.1 B主机：192.168.0.2（eno1网卡） 192.168.1.2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mac常用软件整理">
-<meta property="og:url" content="http://yoursite.com/2020/01/17/mac%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%95%B4%E7%90%86/index.html">
+<meta property="og:title" content="linux多网段互通">
+<meta property="og:url" content="http://yoursite.com/2020/02/22/linux%E5%A4%9A%E7%BD%91%E6%AE%B5%E4%BA%92%E9%80%9A/index.html">
 <meta property="og:site_name" content="syfly007书屋">
-<meta property="og:description" content="[TOC]">
+<meta property="og:description" content="因工作需要，要将2个独立的网段打通，使2个网段中的某些主机能相互访问。 在不新增交换机的前提下，为达到此目标，需要一个主机有2个网口，用来连接2个网段。 环境系统：centos7 防火墙软件：iptables 网络拓扑有2个网段：192.168.0.X 和 192.168.1.X 有3个主机：  A主机：192.168.0.1 B主机：192.168.0.2（eno1网卡） 192.168.1.2">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-01-17T14:16:38.000Z">
-<meta property="article:modified_time" content="2020-01-27T09:33:59.231Z">
+<meta property="article:published_time" content="2020-02-22T04:19:25.000Z">
+<meta property="article:modified_time" content="2020-02-26T14:04:07.525Z">
 <meta property="article:author" content="syfly007">
-<meta property="article:tag" content="soft">
-<meta property="article:tag" content="mac">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="network">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/01/17/mac%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%95%B4%E7%90%86/">
+<link rel="canonical" href="http://yoursite.com/2020/02/22/linux%E5%A4%9A%E7%BD%91%E6%AE%B5%E4%BA%92%E9%80%9A/">
 
 
 <script id="page-configurations">
@@ -74,7 +74,7 @@
   };
 </script>
 
-  <title>mac常用软件整理 | syfly007书屋</title>
+  <title>linux多网段互通 | syfly007书屋</title>
   
 
 
@@ -270,7 +270,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/mac%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%95%B4%E7%90%86/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/22/linux%E5%A4%9A%E7%BD%91%E6%AE%B5%E4%BA%92%E9%80%9A/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -283,7 +283,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          mac常用软件整理
+          linux多网段互通
         </h1>
 
         <div class="post-meta">
@@ -293,14 +293,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-01-17 22:16:38" itemprop="dateCreated datePublished" datetime="2020-01-17T22:16:38+08:00">2020-01-17</time>
+              <time title="创建时间：2020-02-22 12:19:25" itemprop="dateCreated datePublished" datetime="2020-02-22T12:19:25+08:00">2020-02-22</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-27 17:33:59" itemprop="dateModified" datetime="2020-01-27T17:33:59+08:00">2020-01-27</time>
+                <time title="修改时间：2020-02-26 22:04:07" itemprop="dateModified" datetime="2020-02-26T22:04:07+08:00">2020-02-26</time>
               </span>
 
           
@@ -321,17 +321,63 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>[TOC]</p>
-<a id="more"></a> 
+        <p>因工作需要，要将2个独立的网段打通，使2个网段中的某些主机能相互访问。</p>
+<p>在不新增交换机的前提下，为达到此目标，需要一个主机有2个网口，用来连接2个网段。</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>系统：centos7</p>
+<p>防火墙软件：iptables</p>
+<h2 id="网络拓扑"><a href="#网络拓扑" class="headerlink" title="网络拓扑"></a>网络拓扑</h2><p>有2个网段：192.168.0.X 和 192.168.1.X</p>
+<p>有3个主机：</p>
+<ul>
+<li>A主机：192.168.0.1</li>
+<li>B主机：192.168.0.2（eno1网卡） 192.168.1.2（eno2网卡）</li>
+<li>C主机：192.168.1.1</li>
+</ul>
+<p>其中B主机有2个网口，充当2个网段的中间中间路由。</p>
+<p>目标：A和C能相互联通。</p>
+<h2 id="路由转发"><a href="#路由转发" class="headerlink" title="路由转发"></a>路由转发</h2><p>首先需要在B主机上配置转发功能。</p>
+<h3 id="临时生效路由转发功能"><a href="#临时生效路由转发功能" class="headerlink" title="临时生效路由转发功能"></a>临时生效路由转发功能</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt;/proc/sys/net/ipv4/ip_forward</span><br></pre></td></tr></table></figure>
 
-<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><h2 id="MarginNote-Pro"><a href="#MarginNote-Pro" class="headerlink" title="MarginNote Pro"></a>MarginNote Pro</h2><p>​    排名第一的笔记软件！</p>
-<h2 id="Tesseract"><a href="#Tesseract" class="headerlink" title="Tesseract"></a>Tesseract</h2><p>​    文字识别</p>
-<h1 id="书写"><a href="#书写" class="headerlink" title="书写"></a>书写</h1><h2 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h2><h3 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h3><p>​    这篇文章就是用Typora写的</p>
-<h2 id="Latex"><a href="#Latex" class="headerlink" title="Latex"></a>Latex</h2><h3 id="Mathpix-Snipping-Tool"><a href="#Mathpix-Snipping-Tool" class="headerlink" title="Mathpix Snipping Tool"></a>Mathpix Snipping Tool</h3><p>​    能够方便的将公式截图转换为latex代码</p>
-<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><h2 id="Free-Download-Manager"><a href="#Free-Download-Manager" class="headerlink" title="Free Download Manager"></a>Free Download Manager</h2><h1 id="翻墙"><a href="#翻墙" class="headerlink" title="翻墙"></a>翻墙</h1><h2 id="shadowsocks"><a href="#shadowsocks" class="headerlink" title="shadowsocks"></a>shadowsocks</h2><p>​    这个不需要解释</p>
-<h2 id="proxifier"><a href="#proxifier" class="headerlink" title="proxifier"></a>proxifier</h2><p>​    能够针对app进行代理设置</p>
-<h1 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h1><h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><h3 id="mackup"><a href="#mackup" class="headerlink" title="mackup"></a>mackup</h3><h4 id="Winclone"><a href="#Winclone" class="headerlink" title="Winclone"></a>Winclone</h4><p>​    备份、还原mac的windows系统分区，甚至可以将pc中的windows还原到mac上！</p>
-<h2 id="清理"><a href="#清理" class="headerlink" title="清理"></a>清理</h2><h3 id="OmniDiskSweeper"><a href="#OmniDiskSweeper" class="headerlink" title="OmniDiskSweeper"></a>OmniDiskSweeper</h3><p>​    磁盘扫描工具</p>
+<h3 id="永久生效路由转发功能"><a href="#永久生效路由转发功能" class="headerlink" title="永久生效路由转发功能"></a>永久生效路由转发功能</h3><p>编辑 /etc/sysctl.conf文件，新增如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net.ipv4.ip_forward &#x3D; 1</span><br></pre></td></tr></table></figure>
+
+<p>使配置生效并重启系统</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sysctl -p</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置防火墙规则"><a href="#配置防火墙规则" class="headerlink" title="配置防火墙规则"></a>配置防火墙规则</h2><p>配置防火墙规则，将来自0网段的网络流量，指定通过eno2网卡，访问1网段:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -d 192.168.1.0/24 -o eno2 -j MASQUERADE;</span><br></pre></td></tr></table></figure>
+
+<p>配置防火墙规则，将来自1网段的网络流量，指定通过eno1网卡，访问0网段:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -t nat -A POSTROUTING -s 192.168.2.0/24 -d 192.168.0.0/24 -o eno1 -j MASQUERADE;</span><br></pre></td></tr></table></figure>
+
+<p>至此，B主机已经具备了0网段、1网络路由转发的能力。</p>
+<p>但是此时，A、C主机还不能直接相互通过ip访问，还需要进行配置。</p>
+<h2 id="添加路由"><a href="#添加路由" class="headerlink" title="添加路由"></a>添加路由</h2><p>以A主机为例，A想要访问C主机所在的1网段，需要制定B主机作为0、1两个网段的路由。</p>
+<p>linux添加路由命令命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">route add -net 192.168.1.0 netmask 255.255.255.0 gw 192.168.0.2</span><br></pre></td></tr></table></figure>
+
+<p>windows永久添加路由命令(没有-p，重启失效)：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">route -p add 192.168.1.0 mask 255.255.255.0 192.168.0.2</span><br></pre></td></tr></table></figure>
+
+<p>此时A应该可以直接ping通C了。</p>
+<p>C想访问A主机所在0网络，该怎么配置呢？聪明的小伙伴应该不用我教了。</p>
+<h2 id="删除路由"><a href="#删除路由" class="headerlink" title="删除路由"></a>删除路由</h2><p>A哪天不想访问C了，可以把路由规则删了。</p>
+<p>linux命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">route del -net 192.168.1.0 netmask 255.255.255.0</span><br></pre></td></tr></table></figure>
+
+<p>windows命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">route -p delete 192.168.1.0 mask 255.255.255.0 192.168.0.2</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="Destination-Host-Prohibited-报错"><a href="#Destination-Host-Prohibited-报错" class="headerlink" title="Destination Host Prohibited 报错"></a>Destination Host Prohibited 报错</h3><p>网络配置好，ping发现以下报错：</p>
+<p>icmp_seq=1 Destination Host Prohibited</p>
+<p>参考<a href="http://conglinbugu.lofter.com/post/3d19af_6429804" target="_blank" rel="noopener">该篇</a>博文解决：</p>
+<p>使用iptables -t filter –list命令后发现filter表中的FORWARD链里有一条 </p>
+<p>“REJECT   all  –  anywhere       anywhere       reject-with icmp-host-prohibited”。 </p>
+<p>想想应该就是这一条规则作怪，于是执行以下命令:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -t filter -F FORWARD</span><br></pre></td></tr></table></figure>
+
+<p>OK，现在可以ping通网关了</p>
 
     </div>
 
@@ -342,8 +388,8 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/soft/" rel="tag"><i class="fa fa-tag"></i> soft</a>
-              <a href="/tags/mac/" rel="tag"><i class="fa fa-tag"></i> mac</a>
+              <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
+              <a href="/tags/network/" rel="tag"><i class="fa fa-tag"></i> network</a>
           </div>
 
         
@@ -352,12 +398,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/01/15/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="prev" title="hexo搭建博客">
-      <i class="fa fa-chevron-left"></i> hexo搭建博客
+    <a href="/2020/02/03/linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%8E%AF%E5%A2%83/" rel="prev" title="linux命令行环境">
+      <i class="fa fa-chevron-left"></i> linux命令行环境
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/01/19/%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/" rel="next" title="评价指标">
-      评价指标 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/02/26/linux%E7%B3%BB%E7%BB%9F%E6%8B%B7%E8%B4%9D%E5%90%8E%E6%97%A0%E6%B3%95%E8%BF%9B%E5%85%A5%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" rel="next" title="linux系统拷贝后无法进入图形化界面">
+      linux系统拷贝后无法进入图形化界面 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -418,7 +464,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#阅读"><span class="nav-number">1.</span> <span class="nav-text">阅读</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MarginNote-Pro"><span class="nav-number">1.1.</span> <span class="nav-text">MarginNote Pro</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tesseract"><span class="nav-number">1.2.</span> <span class="nav-text">Tesseract</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#书写"><span class="nav-number">2.</span> <span class="nav-text">书写</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown"><span class="nav-number">2.1.</span> <span class="nav-text">markdown</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Typora"><span class="nav-number">2.1.1.</span> <span class="nav-text">Typora</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Latex"><span class="nav-number">2.2.</span> <span class="nav-text">Latex</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mathpix-Snipping-Tool"><span class="nav-number">2.2.1.</span> <span class="nav-text">Mathpix Snipping Tool</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载"><span class="nav-number">3.</span> <span class="nav-text">下载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Free-Download-Manager"><span class="nav-number">3.1.</span> <span class="nav-text">Free Download Manager</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#翻墙"><span class="nav-number">4.</span> <span class="nav-text">翻墙</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#shadowsocks"><span class="nav-number">4.1.</span> <span class="nav-text">shadowsocks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#proxifier"><span class="nav-number">4.2.</span> <span class="nav-text">proxifier</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统"><span class="nav-number">5.</span> <span class="nav-text">系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#备份"><span class="nav-number">5.1.</span> <span class="nav-text">备份</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mackup"><span class="nav-number">5.1.1.</span> <span class="nav-text">mackup</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Winclone"><span class="nav-number">5.1.1.1.</span> <span class="nav-text">Winclone</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#清理"><span class="nav-number">5.2.</span> <span class="nav-text">清理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OmniDiskSweeper"><span class="nav-number">5.2.1.</span> <span class="nav-text">OmniDiskSweeper</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络拓扑"><span class="nav-number">2.</span> <span class="nav-text">网络拓扑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路由转发"><span class="nav-number">3.</span> <span class="nav-text">路由转发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#临时生效路由转发功能"><span class="nav-number">3.1.</span> <span class="nav-text">临时生效路由转发功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#永久生效路由转发功能"><span class="nav-number">3.2.</span> <span class="nav-text">永久生效路由转发功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置防火墙规则"><span class="nav-number">4.</span> <span class="nav-text">配置防火墙规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加路由"><span class="nav-number">5.</span> <span class="nav-text">添加路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除路由"><span class="nav-number">6.</span> <span class="nav-text">删除路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">7.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Destination-Host-Prohibited-报错"><span class="nav-number">7.1.</span> <span class="nav-text">Destination Host Prohibited 报错</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

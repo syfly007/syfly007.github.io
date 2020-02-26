@@ -48,15 +48,21 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="syfly007书屋">
-<meta property="og:url" content="http://yoursite.com/tags/command/index.html">
+  <meta name="description" content="现象工作中需要将一个centos系统作为原盘，拷贝给其他机器使用，发现启动后无法进入图形化桌面。 原因源系统盘所在主机有独立显卡，目标机器却没有，找不到对应独立显卡配置，导致无法启动图形化界面。 解决删除独立显卡配置即可，并重启系统。 12mv &#x2F;etc&#x2F;X11&#x2F;xorg.conf &#x2F;etc&#x2F;X11&#x2F;xorg.conf.bak; reboot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux系统拷贝后无法进入图形化界面">
+<meta property="og:url" content="http://yoursite.com/2020/02/26/linux%E7%B3%BB%E7%BB%9F%E6%8B%B7%E8%B4%9D%E5%90%8E%E6%97%A0%E6%B3%95%E8%BF%9B%E5%85%A5%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/index.html">
 <meta property="og:site_name" content="syfly007书屋">
+<meta property="og:description" content="现象工作中需要将一个centos系统作为原盘，拷贝给其他机器使用，发现启动后无法进入图形化桌面。 原因源系统盘所在主机有独立显卡，目标机器却没有，找不到对应独立显卡配置，导致无法启动图形化界面。 解决删除独立显卡配置即可，并重启系统。 12mv &#x2F;etc&#x2F;X11&#x2F;xorg.conf &#x2F;etc&#x2F;X11&#x2F;xorg.conf.bak; reboot">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-26T13:22:01.000Z">
+<meta property="article:modified_time" content="2020-02-26T13:29:33.913Z">
 <meta property="article:author" content="syfly007">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="centos">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/tags/command/">
+<link rel="canonical" href="http://yoursite.com/2020/02/26/linux%E7%B3%BB%E7%BB%9F%E6%8B%B7%E8%B4%9D%E5%90%8E%E6%97%A0%E6%B3%95%E8%BF%9B%E5%85%A5%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/">
 
 
 <script id="page-configurations">
@@ -64,11 +70,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>标签: command | syfly007书屋</title>
+  <title>linux系统拷贝后无法进入图形化界面 | syfly007书屋</title>
   
 
 
@@ -259,50 +265,94 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">command
-          <small>标签</small>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/26/linux%E7%B3%BB%E7%BB%9F%E6%8B%B7%E8%B4%9D%E5%90%8E%E6%97%A0%E6%B3%95%E8%BF%9B%E5%85%A5%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="syfly007">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="syfly007书屋">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          linux系统拷贝后无法进入图形化界面
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-26 21:22:01 / 修改时间：21:29:33" itemprop="dateCreated datePublished" datetime="2020-02-26T21:22:01+08:00">2020-02-26</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
+        <h1 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h1><p>工作中需要将一个centos系统作为原盘，拷贝给其他机器使用，发现启动后无法进入图形化桌面。</p>
+<h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>源系统盘所在主机有独立显卡，目标机器却没有，找不到对应独立显卡配置，导致无法启动图形化界面。</p>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>删除独立显卡配置即可，并重启系统。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/X11/xorg.conf /etc/X11/xorg.conf.bak; </span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-03T20:02:57+08:00"
-              content="2020-02-03">
-          02-03
-        </time>
-      </div>
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
+              <a href="/tags/centos/" rel="tag"><i class="fa fa-tag"></i> centos</a>
+          </div>
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/02/03/linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%8E%AF%E5%A2%83/" itemprop="url">
-            <span itemprop="name">linux命令行环境</span>
-          </a>
-      </h2>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/22/linux%E5%A4%9A%E7%BD%91%E6%AE%B5%E4%BA%92%E9%80%9A/" rel="prev" title="linux多网段互通">
+      <i class="fa fa-chevron-left"></i> linux多网段互通
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
+  
+  
+  
 
-    </div>
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
@@ -353,6 +403,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#现象"><span class="nav-number">1.</span> <span class="nav-text">现象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原因"><span class="nav-number">2.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决"><span class="nav-number">3.</span> <span class="nav-text">解决</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
