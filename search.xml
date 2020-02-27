@@ -41,10 +41,10 @@
 <p>使配置生效并重启系统</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sysctl -p</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
 
-<h2 id="配置防火墙规则"><a href="#配置防火墙规则" class="headerlink" title="配置防火墙规则"></a>配置防火墙规则</h2><p>配置防火墙规则，将来自0网段的网络流量，指定通过eno2网卡，访问1网段:</p>
+<h2 id="配置防火墙规则"><a href="#配置防火墙规则" class="headerlink" title="配置防火墙规则"></a>配置防火墙规则</h2><p>配置防火墙规则，将来自0网段的网络流量，通过eno2网卡，访问1网段:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -d 192.168.1.0/24 -o eno2 -j MASQUERADE;</span><br></pre></td></tr></table></figure>
 
-<p>配置防火墙规则，将来自1网段的网络流量，指定通过eno1网卡，访问0网段:</p>
+<p>配置防火墙规则，将来自1网段的网络流量，通过eno1网卡，访问0网段:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iptables -t nat -A POSTROUTING -s 192.168.2.0/24 -d 192.168.0.0/24 -o eno1 -j MASQUERADE;</span><br></pre></td></tr></table></figure>
 
 <p>至此，B主机已经具备了0网段、1网络路由转发的能力。</p>
